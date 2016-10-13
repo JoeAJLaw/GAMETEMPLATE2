@@ -131,20 +131,19 @@ def print_room(room):
     # Display room description
     print(room["description"])
     print()
-    print_room_items(room)
+    
     
     #
     # COMPLETE ME!
-    #
-#Different Method: 
+    # 
     
-    #if len(room["items"]) > 0:
-    #   items_output = "There is a "
-    #  for item in len(room["items"]):
-    #     items_output = items_output + item["name"] + ", "
-    # items_output = items_output[0:len(items_output)-2]
-    #items_output = items_output + " here.\n" 
-    #print(items_output)
+    if len(room["items"]) > 0:
+        items_output = "There is "
+        for item in room["items"]:
+            items_output = items_output + item["name"] + ", "
+        items_output = items_output[0:len(items_output)-2]
+        items_output = items_output + " here.\n" 
+        print(items_output)
     
        
 def exit_leads_to(exits, direction):
